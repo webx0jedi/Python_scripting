@@ -29,6 +29,13 @@ if ',' in targets:
         scan(ip_addr.strip(' '), ports)
     else:
         scan(targets,ports)
+else:
+    print(termcolor.colored(("[*] Scanning started at: ") + str(datetime.now()), 'green'))
+    print(termcolor.colored(("[*] Scanning Targets..."), 'green'))
+    for ip_addr in targets:
+        scan(ip.addr, ports)
+    else:
+        scan(targets,ports)
 
 #if KeyboardInterrupt:
     #print("\n Exiting Program...")
